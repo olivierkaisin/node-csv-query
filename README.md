@@ -1,7 +1,7 @@
 node-csv-query
 ==============
 
-Turn your CSV files to queryable objects 
+Turn your CSV files to queryable objects.
 
 
 ## How to use
@@ -26,3 +26,16 @@ csv.createFromFile(
 });
 
 ```
+
+
+## Credits
+
+- bluebird
+- csv-parse
+- lodash
+- event-stream
+
+
+## License
+
+MIT
