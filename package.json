@@ -1,0 +1,22 @@
+{
+  "name": "csv-query",
+  "version": "0.0.1",
+  "description": "Turn your CSV files to queryable objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run mocha",
+    "mocha": "NODE_ENV=test ./node_modules/.bin/mocha --slow 200 -R spec $(find tests -name \"*.spec.js\")"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "~1.2.4",
+    "lodash": "~2.4.1",
+    "csv-parse": "0.0.3",
+    "event-stream": "~3.1.5"
+  },
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "mocha": "~1.19.0"
+  }
+}
