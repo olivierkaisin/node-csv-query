@@ -16,7 +16,7 @@ id,firstName,lastName,amountOfBooks
 ```
 
 
-How to find the row with `firstName=Olivier`:
+How to find the row with `firstName=Olivier`
 
 ```javascript
 "use strict";
