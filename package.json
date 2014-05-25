@@ -1,6 +1,6 @@
 {
   "name": "csv-query",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Turn your CSV files to queryable objects",
   "main": "index.js",
   "scripts": {
