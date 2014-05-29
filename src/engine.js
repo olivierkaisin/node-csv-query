@@ -2,6 +2,16 @@
 
 
 
+function stringifyQuery(query)
+{
+  for (var k in query) {
+    query[k] = String(query[k]);
+  }
+  return query;
+}
+
+
+
 function matchRowAgainstQuery(row, query, options)
 {
   options = options || {};
@@ -9,9 +19,16 @@ function matchRowAgainstQuery(row, query, options)
   var caseInsensitive = options.caseInsensitive;
   var trimWhitespaces = options.trimWhitespaces;
 
+  query = stringifyQuery(query);
+
   for (var field in query) {
-    var expected = query[field].toString();
-    var value    = row[field].toString();
+    var expected = query[field];
+    var value    = row[field];
+
+    if (!value) {
+      return false;
+    }
+    value = value.toString();
 
     if (caseInsensitive) {
       expected = expected.toLowerCase();
