@@ -21,8 +21,10 @@ function mapToObject(row, header)
 
 
 
-function createFromFile(filePath)
+function createFromFile(filePath, options)
 {
+  options = options || {};
+
   if (!fs.existsSync(filePath)) {
     throw new Error("File does not exists");
   }
@@ -44,7 +46,7 @@ function createFromFile(filePath)
     this.emit("end");
   }).on("error", deferred.callback);
 
-  var parser = csvParse({ delimiter: "," });
+  var parser = csvParse({ delimiter: options.delimiter || "," });
 
   fs.createReadStream(filePath)
     .pipe(parser)
