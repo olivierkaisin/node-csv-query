@@ -26,8 +26,9 @@ var csv = require("csv-query");
 
 
 csv.createFromFile(
-  __dirname + "/dataset.csv"
-).then(function (db) {
+  __dirname + "/dataset.csv", { 
+  delimiter: ";" 
+}).then(function (db) {
   return db.findOne({ 
     firstName: "Olivier" 
   });
