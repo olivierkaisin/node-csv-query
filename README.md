@@ -1,4 +1,4 @@
-node-csv-query
+node-csv-query [![Build Status](https://travis-ci.org/olivierkaisin/node-csv-query.svg?branch=master)](https://travis-ci.org/olivierkaisin/node-csv-query)
 ==============
 
 Turn your CSV files to queryable objects.
